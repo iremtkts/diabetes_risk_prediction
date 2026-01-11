@@ -1,6 +1,7 @@
-def main():
-    print("Hello from diabetes-risk!")
+from src.config import DATA_FILE
+from src.data import DataLoader
 
+loader = DataLoader()
+df = loader.load_data(DATA_FILE)
 
-if __name__ == "__main__":
-    main()
+print(df.head())
